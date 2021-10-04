@@ -63,6 +63,8 @@ const handlePizzaSubmit = event => {
     })
     .catch(err => {
       console.log(err);
+      // store new-pizza object in browser's IndexedDB db called Pizza Hunt - see idb.js file in /public
+      saveRecord(formData);
     });
 };
 
